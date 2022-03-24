@@ -1,18 +1,17 @@
 import type {NextPage} from 'next';
-import {Fragment} from "react";
 import styles from '../styles/Home.module.css';
+import {Fragment} from "react";
 import Link from "next/dist/client/link";
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
     return (
         <Fragment>
             <h1 className={styles.title}>
-                TODO LIST
+                Welcome to About Page
             </h1>
-            <Link href={"/about"}>Go to About Page</Link>
-            <Link href={"/my-todos"}>Go to TO DO Page</Link>
+            <Link href={"/"}>Go to Home Page</Link>
         </Fragment>
     );
 };
 
-export default Home
+export default About
