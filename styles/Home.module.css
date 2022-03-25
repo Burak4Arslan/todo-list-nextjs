@@ -127,3 +127,25 @@
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
+.todo {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.addTodoButton {
+    background-color: #28eef1;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
