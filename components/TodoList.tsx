@@ -6,7 +6,7 @@ import {TodoInterface} from "./Todo";
 
 interface TodoListPropsInterface {
     todoList: TodoInterface[]
-    changeTodo: (a: TodoInterface) => {}
+    editTodo: (a: TodoInterface) => {}
 }
 
 const TodoList: NextPage = (props: TodoListPropsInterface) => {
@@ -14,7 +14,7 @@ const TodoList: NextPage = (props: TodoListPropsInterface) => {
     return (
         <Fragment>
             {props.todoList?.map((todo) => {
-                return <Todo todo={todo} key={todo.id} changeTodo={props.changeTodo}/>
+                return <Todo todo={todo} key={todo.id} editTodo={props.editTodo}/>
             })}
         </Fragment>
     );

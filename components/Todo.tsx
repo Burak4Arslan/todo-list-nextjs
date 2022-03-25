@@ -9,7 +9,7 @@ interface TodoObjectInterface {
 
 interface TodoInterface {
     todo: TodoObjectInterface,
-    changeTodo: (a: TodoInterface) => {}
+    editTodo: (a: TodoInterface) => {}
 }
 
 const Todo: NextPage = (props: TodoInterface) => {
@@ -20,8 +20,11 @@ const Todo: NextPage = (props: TodoInterface) => {
     return (
         <Fragment>
             <div className={styles.todo}>
-                {beingEdited ? <input value={name} onChange={(event) => setName(event.target.value)}/> : props.todo?.name}
-                {beingEdited ? <button onClick={() => {props.changeTodo({name: name, id: props.todo.id}); setBeingEdited(false)}}>Okay</button>
+                {beingEdited ?
+                    <input value={name} onChange={(event) => setName(event.target.value)}/>
+                    : props.todo?.name}
+                {beingEdited ?
+                    <button onClick={() => {props.editTodo({name: name, id: props.todo.id}); setBeingEdited(false)}}>Okay</button>
                     : <button onClick={() => setBeingEdited(true)}>Edit</button>}
             </div>
         </Fragment>

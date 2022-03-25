@@ -17,7 +17,7 @@ const DailyTodos: NextPage = () => {
         setDailyTodos(tempDailyTodos);
     }
     
-    function changeTodo(newValues: TodoInterface) {
+    function editTodo(newValues: TodoInterface) {
         const index: number = dailyTodos.findIndex(todo => todo.id===newValues.id);
         const tempDailyTodos = [...dailyTodos];
         tempDailyTodos[index] = newValues;
@@ -33,7 +33,7 @@ const DailyTodos: NextPage = () => {
                 <Link href={"/"}>Go to Home Page</Link>
             </div>
             <button onClick={addTodo} className={styles.addTodoButton}>Add Daily To Do</button>
-            <TodoList todoList={dailyTodos} changeTodo={changeTodo}/>
+            <TodoList todoList={dailyTodos} editTodo={editTodo}/>
         </Fragment>
     );
 };
