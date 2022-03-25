@@ -1,20 +1,20 @@
 import type {NextPage} from 'next';
 import {Fragment} from "react";
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import Link from "next/dist/client/link";
+import MyApp from "../_app";
 
-const Home: NextPage = () => {
+const DailyTodos: NextPage = () => {
     return (
         <Fragment>
             <h1 className={styles.title}>
-                TODO LIST APP
+                Welcome to Daily To Do Page
             </h1>
             <div className={styles.navlinks}>
-                <Link href={"/my-todos/daily-todos"}>Go to Daily TO DO Page</Link>
-                <Link href={"/my-todos/montly-todos"}>Go to Montly TO DO Page</Link>
+                <Link href={"/"}>Go to Home Page</Link>
             </div>
         </Fragment>
     );
 };
 
-export default Home
+export default DailyTodos;
